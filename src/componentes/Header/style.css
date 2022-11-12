@@ -1,10 +1,14 @@
-header {
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* font-family: 'Dancing Script', cursive; */
+
+.header {
     background-image: url('/public/assets/images/general/image_hero.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    border: 1px solid purple;
 }
 
 .header_content_transparency {
@@ -38,7 +42,7 @@ header {
 .nav_link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 3vmin;
 }
 
 .nav_link::after {
@@ -62,6 +66,7 @@ header {
 }
 
 .header_content_hero_text {
+    font-family: 'Anton', sans-serif;
     border: 1px solid #fff;
     width: 60%;
     padding: 2.5rem;
@@ -71,4 +76,8 @@ header {
     font-weight: 100;
     font-size: 8vh;
     line-height: auto;
+}
+
+.headerSearch {
+    background-color: black;
 }

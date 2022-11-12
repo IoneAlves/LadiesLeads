@@ -5,3 +5,44 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.shows_content_cta_bg {
+    background-image: url('/public/assets/images/general/image_streaming.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding: 3rem 0;
+    margin: 0 0 3rem 0;
+    width: 100%;
+    color: #fff;
+    text-shadow: 1px 1px 10px #0c0c0c;
+}
+
+.shows_content_cta {
+    padding: 3rem 0;
+}
+
+.shows_content_cta_title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+.shows_content_cta_link {
+    border: 2px solid black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.shows_content_cta_link:hover {
+    color: rgb(255, 255, 255);
+    background-color: #000;   
+}

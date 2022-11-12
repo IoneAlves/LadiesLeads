@@ -15,10 +15,6 @@ function About () {
                     </div>
                 </div>
             </div>
-            <div className='container about_content content_cta'>
-                <h3 className='content_cta_title'>our creation</h3>
-                <a className='content_cta_link' href="">see all</a>
-            </div>
         </section>
     );
 };
