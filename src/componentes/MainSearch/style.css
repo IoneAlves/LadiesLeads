@@ -28,3 +28,7 @@
 .return_info_text {
     font-size: 7vmin;
 }
+.testeRoot {
+    background-color: red;
+    color: white;
+}
