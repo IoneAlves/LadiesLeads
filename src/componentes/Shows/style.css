@@ -40,9 +40,102 @@
     font-weight: 500;
     letter-spacing: 2px;
     transition: background-color 250ms ease-in-out;
+    text-decoration: none;
+}
+
+.a_link {
+    text-decoration: none;
 }
 
 .shows_content_cta_link:hover {
     color: rgb(255, 255, 255);
     background-color: #000;   
+}
+
+.img1_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardgrey.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img1_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/grey.png');
+    transform: translate(-10px, -5px);
+}
+
+.img2_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardEuphoria.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img2_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/euphoria.png');
+    transform: translate(-10px, -5px);
+}
+
+.img3_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardNcsi.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img3_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/tennant.png');
+    transform: translate(-10px, -5px);
+}
+
+.img4_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardTheWilds.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img4_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/lea.png');
+    transform: translate(-10px, -5px);
+}
+
+.img5_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardKimmy.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img5_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/kimmy.png');
+    transform: translate(-10px, -5px);
+}
+
+.img6_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardOnce.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img6_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/evilqueen.png');
+    transform: translate(-10px, -5px);
+}
+
+.img7_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardOrphan.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img7_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/orphan.png');
+    transform: translate(-10px, -5px);
+}
+
+.img8_front  {
+    background-image: url('../../../public/assets/images/cards/desktop/cardGoodGirls.png');
+    height: 450px;
+    width: 256px;
+}
+
+.img8_front_hover:hover {
+    background-image: url('../../../public/assets/images/cards/desktop/goodgirls.png');
+    transform: translate(-10px, -5px);
 }

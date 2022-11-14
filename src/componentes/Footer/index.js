@@ -13,7 +13,6 @@ function Footer () {
                          </div>
                          <nav className="footer_content_left_nav">
                             <a className='nav_link' href="/#">About</a>
-                            <a className='nav_link' href="/#">Numbers</a>
                             <a className='nav_link' href="/#">Shows</a>
                             <a className='nav_link' href="/#">Info</a>
                             <Link className='nav_link' to='/search'>Search</Link>
@@ -26,7 +25,7 @@ function Footer () {
                              <img className="social_media" src={'assets/icons/icon-pinterest.svg'}></img>
                              <img className="social_media" src={'assets/icons/icon-twitter.svg'}></img>
                          </div>                    
-                         <p className="footer_content_rigth_text">2022 Ladeis Leads. &#169; All right reserved.</p>
+                         <p className="footer_content_rigth_text">2022 Ladies Leads. &#169; All right reserved.</p>
                      </div>
                  </div>
              </section>

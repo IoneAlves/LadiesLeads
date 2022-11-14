@@ -1,12 +1,24 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
 .info_section {
     padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
 }
 
 .info_content {
     display: flex;
     gap: 2rem;
     position: relative;
-    margin-bottom: 3rem;
+    margin: 0 auto;
+    justify-content: flex-end;
 }
 
 .info_content_box_img, .info_content_box_text {
@@ -22,18 +34,19 @@
     border: 1px solid rgba(184, 184, 184, 0.473);
     margin: 3rem 0 0 2rem;
     padding: 0;
+    position: absolute;
+    right: 2rem;
+    left: 0rem;
+    top: 0rem;
 }
 
 .info_content_box_img {
-    position: absolute;
-    right: 2rem;
-    top: 0rem;
+   margin-right: 2rem;
 }
 
 .info_img {
     width: 100%;
     box-shadow: 3px 3px 5px rgba(70, 70, 70, 0.973);
-    margin: 0;
 }
 
 .info_content_box_text {

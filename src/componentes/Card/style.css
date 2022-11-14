@@ -1,17 +1,8 @@
 .card_content {
-    background-image: url('../../../public/assets/images/cards/desktop/cardgrey.png');
     background-size: cover;
     height: 450px;
     width: 256px;
     background-repeat: no-repeat;
-}
-
-.card_content:hover {
-    background-image: url('../../../public/assets/images/cards/desktop/grey.png');
-    height: 450px;
-    width: 256px;
-    background-repeat: no-repeat;
-    transform: translate(-10px, -5px);
 }
 
 .card_content_transparency {

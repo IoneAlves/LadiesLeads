@@ -2,10 +2,10 @@ import React from "react";
 import './style.css'
 
 
-function Card (){
+function Card (props){
     return(
-        <div className="card_content">
-                <div className="card_content_transparency"></div>
+        <div className={props.style}>
+                <div className={props.hover}></div>
         </div>
     );
 };

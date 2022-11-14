@@ -8,60 +8,64 @@ import { ReactDOM } from 'react';
 function MainSearch (props) {
 
     const inputRef = useRef(null);
-    let [value, newValue] = useState('')
+    const hideDiv = useRef(null)
+    const [initial, final] = useState('')
 
-    const api_key = 'b802fbd3e36b896f1ab90e5265d94830';
+    // hideDiv.current.classList.add('hideDiv')
 
     function getShow() {
-
-        //achar o nome da atriz
         let showName = inputRef.current.value;
+            if (showName != '') {            
+                let apiKey = `http://www.omdbapi.com/?t=${showName}&apikey=908b934c`;
+                let res = fetch(apiKey)
+                    res
+                    .then(resp => resp.json())
+                        .then(dataShow => {
+                            console.log(dataShow);
+                            let nameActress = dataShow.Actors.substring(0, dataShow.Actors.indexOf(' '));
+                            const result = fetch(`https://api.genderize.io?name=${nameActress}`);
+                                   result
+                                   .then(reponse => reponse.json())
+                                        .then(data => {
+                                            if(data.gender == 'female'){
+                                                console.log(`${nameActress} é uma atriz`);
+                                                let onAirTest = '';
 
-            if (showName != '') {
-            const result = fetch(`https://api.genderize.io?name=${showName}`);
-            result
-                .then(reponse => reponse.json())
-                    .then(data => {
-                        if(data.gender == 'female'){
-                            console.log('É uma atriz');
-                        } else {
-                            console.log("Sorry, but this show isn't rulled by a girl.")
-                        }
-                    })
-                .catch(erro => console.log(erro))
+                                                if(dataShow.Year.length <= 5){                                                   
+                                                    onAirTest = "Yes, it's still airing.";
+                                                } else {
+                                                    onAirTest = "No, it's finished already.";
+                                                }
+                                                
+                                                const infoShow = {
+                                                    poster: dataShow.Poster,
+                                                    title: `Title: ${dataShow.Title}`,
+                                                    actors: `Actors: ${dataShow.Actors}`,
+                                                    genre: `Genre: ${dataShow.Genre}`,
+                                                    plot: `Plot: ${dataShow.Plot}`,
+                                                    totalSeasons: `Total Seasons: ${dataShow.totalSeasons}`,
+                                                    year: `Year: ${dataShow.Year}`,
+                                                    onAir: `Currently Airing: ${onAirTest}`
+                                                }
 
-            let apiKey = `http://www.omdbapi.com/?t=${showName}&apikey=908b934c`;
+                                                final(infoShow);
 
-            let res = fetch(apiKey)
-            res
-                .then(resp => resp.json())
-                    .then(dataShow => console.log(dataShow.Actors[0]))
-                .catch(erro => console.log(erro))
+                                                console.log(`${nameActress} é uma atriz ${infoShow}`);
+                                                console.log(infoShow);
+
+                                            } else {
+                                                const infoShow = {
+                                                    response: `Sorry, but this show isn't rulled by a girl. Please, try another.`
+                                                }
+
+                                                final(infoShow);
+                                            }
+                                        })
+                                        .catch(erro => console.log(erro));
+                        })
+                    .catch(erro => console.log(erro))
         }
-    }
-
-
-    // if (name != '') {
-    //     const result = fetch(`https://api.genderize.io?name=${name}`);
-    //     result
-    //         .then(reponse => reponse.json())
-    //             .then(data => console.log(data))
-    //         .catch(erro => console.log(erro))
-    // }
-
-    
-    // async function searchName (value) {
-    //     try {
-    //         const result = await fetch(`https://api.genderize.io?name=${value}`);
-    //             result
-    //             .then(reponse => reponse.json())
-    //                 .then(data => console.log(data));
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
-
-    // searchName(value);        
+    }     
 
     return (
         <section className='search'>
@@ -73,15 +77,21 @@ function MainSearch (props) {
                             <button className="form_btn" type='button' onClick={getShow}>Search</button>
                         </form>
                     </div>
-                    <div className='search_content_return'>
+                    <div className='search_content_return_positive'>
                         <div className='search_content_return_img'>
-                            <img></img>
+                            <img className='img_return' src={initial.poster}></img>
                         </div>
                         <div className='search_content_return_info'>
-                            <p className='return_info_text'></p>
-                            <p itemID='testeRoot'></p>
+                            <p className='return_info_title'>{initial.title}</p>
+                            <p className='return_info_text'>{initial.actors}</p>
+                            <p className='return_info_text'>{initial.genre}</p>
+                            <p className='return_info_text'>{initial.plot}</p>
+                            <p className='return_info_text'>{initial.totalSeasons}</p>
+                            <p className='return_info_text'>{initial.year}</p>
+                            <p className='return_info_text'>{initial.onAir}</p>
                         </div>
-                    </div>      
+                    </div>
+                    <div className='search_content_return_negative'>{initial.response}</div>  
                 </div>
             </div>            
         </section>

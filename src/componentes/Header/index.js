@@ -15,7 +15,6 @@ function HeaderHome () {
                         </div>
                         <nav className='header_content_nav'>
                             <a className='nav_link' href="/#">About</a>
-                            <a className='nav_link' href="/#">Numbers</a>
                             <a className='nav_link' href="/#">Shows</a>
                             <a className='nav_link' href="/#">Info</a>
                             <Link className='nav_link' to='/search'>Search</Link>
@@ -43,7 +42,6 @@ function HeaderSearch () {
                         </div>
                         <nav className='header_content_nav'>
                             <a className='nav_link' href="/#">About</a>
-                            <a className='nav_link' href="/#">Numbers</a>
                             <a className='nav_link' href="/#">Shows</a>
                             <a className='nav_link' href="/#">Info</a>
                             <Link className='nav_link' to='/search'>Search</Link>
